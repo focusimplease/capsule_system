@@ -1,0 +1,44 @@
+[project]
+name = "capsule-system"
+version = "0.1.0"
+description = "胶囊系统第一版主流程：Agent 基座驱动的个人知识内化 SE 产品"
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.12",
+    "pydantic>=2.7",
+    "httpx>=0.27",
+    "pypdf>=4.2",
+    "Pillow>=10.3",
+    "trafilatura>=1.12",
+    "lxml>=5.2",
+    "av>=11",
+    "faster-whisper>=1.0",
+    # onnxruntime 1.20+ 的 macOS x86_64 wheel 要求 macOS 13+，
+    # 本机为 macOS 12，约束到仍有兼容 wheel 的版本
+    "onnxruntime>=1.17,<1.20",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.2"]
+
+[tool.uv]
+# 本机为 macOS x86_64：限制解析环境，避免选中无本平台 wheel 的
+# onnxruntime 新版本（faster-whisper 的 VAD 依赖）
+required-environments = ["sys_platform == 'darwin' and platform_machine == 'x86_64'"]
+
+[project.scripts]
+capsule = "capsule_system.cli.entrypoint:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/capsule_system"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "live_feishu: 需要真实飞书测试空间的端到端验收（默认跳过）",
+]
+filterwarnings = ["ignore::DeprecationWarning"]

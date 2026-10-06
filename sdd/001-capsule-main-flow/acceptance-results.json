@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-17T06:31:05.420815+00:00",
+  "dataset": "capsule-main-flow-v1",
+  "pytest_exit_status": 0,
+  "criteria": {
+    "SC-001": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_text_main_flow"
+      ]
+    },
+    "SC-002": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_no_attachment_and_schema"
+      ]
+    },
+    "SC-003": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_text_main_flow"
+      ]
+    },
+    "SC-004": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_text_main_flow"
+      ]
+    },
+    "SC-005": {
+      "numerator": 2,
+      "denominator": 2,
+      "failed": 0,
+      "tests": [
+        "test_live_no_attachment_and_schema",
+        "test_no_binary_attachment_is_persisted_in_live_feishu"
+      ]
+    },
+    "SC-006": {
+      "numerator": 2,
+      "denominator": 2,
+      "failed": 0,
+      "tests": [
+        "test_web_image_acceptance_cases",
+        "test_no_binary_attachment_is_persisted_in_live_feishu"
+      ]
+    },
+    "SC-007": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_review_decision_and_rule_candidate"
+      ]
+    },
+    "SC-008": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_review_decision_and_rule_candidate"
+      ]
+    },
+    "SC-009": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_review_decision_and_rule_candidate"
+      ]
+    },
+    "SC-010": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_text_main_flow"
+      ]
+    },
+    "SC-011": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_local_duplicate_and_novel_value"
+      ]
+    },
+    "SC-012": {
+      "numerator": 2,
+      "denominator": 2,
+      "failed": 0,
+      "tests": [
+        "test_text_graphics_source_policy",
+        "test_no_binary_attachment_is_persisted_in_live_feishu"
+      ]
+    },
+    "SC-013": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_uncertainty_routing"
+      ]
+    },
+    "SC-014": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_review_decision_and_rule_candidate"
+      ]
+    },
+    "SC-015": {
+      "numerator": 1,
+      "denominator": 1,
+      "failed": 0,
+      "tests": [
+        "test_live_review_decision_and_rule_candidate"
+      ]
+    }
+  }
+}
